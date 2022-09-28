@@ -1,0 +1,31 @@
+
+FUNCTION insertion_sort(arr , n) : return_type
+VAR
+    i,j,ref:INTEGER;
+BEGIN
+    FOR i FROM 0 TO n-1 STEP 1  DO
+        ref = arr[i]
+        j = i-1
+
+        WHILE (j>0 AND arr[j]>ref) DO
+            arr[j + 1] = arr[j];
+			j = j - 1;
+        END_WHILE
+		arr[j + 1] = ref;
+        
+    END_FOR
+    RETURN value ;
+END
+
+
+
+
+ALGORITHM insertion_sort
+VAR
+    arr : ARRAY_OF INTEGER[50];
+    n:INTEGER;
+BEGIN
+    arr = [12, 10, 15, 25, 5, 8, 0, 6 ];
+    n = arr.length;
+    insertion_sort(arr , n)
+END
